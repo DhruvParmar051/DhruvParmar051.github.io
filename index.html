@@ -48,7 +48,6 @@
   a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
   a:hover { color: #fff; }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -68,7 +67,6 @@
   .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -151,7 +149,6 @@
   .hero-grid span { background: var(--accent); border-radius: 2px; }
   @media (max-width: 800px) { .hero-grid { display: none; } }
 
-  /* SECTIONS */
   section {
     max-width: 1100px;
     margin: 0 auto;
@@ -162,7 +159,6 @@
   .section-label { font-family: var(--mono); font-size: 11px; color: var(--muted2); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; }
   .section-title { font-family: var(--mono); font-size: 1.5rem; font-weight: 600; color: var(--text); margin-bottom: 3rem; letter-spacing: -0.02em; }
 
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -203,7 +199,6 @@
   .project-link::after { content: '→'; transition: transform 0.2s; }
   .project-link:hover::after { transform: translateX(4px); }
 
-  /* EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); }
 
   .exp-item {
@@ -229,7 +224,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    padding-left: 0;
     list-style: none;
   }
 
@@ -244,7 +238,6 @@
 
   .exp-bullets li::before { content: '›'; color: var(--muted2); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
-  /* SKILLS */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -258,7 +251,6 @@
   .skill-list li { font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
   .skill-list li::before { content: '›'; color: var(--muted2); font-size: 14px; }
 
-  /* ABOUT */
   .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   @media (max-width: 700px) { .about-inner { grid-template-columns: 1fr; gap: 2rem; } }
 
@@ -270,13 +262,11 @@
   .stat-label { font-family: var(--mono); font-size: 11px; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.06em; }
   .stat-value { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 500; }
 
-  /* CERTS */
   .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; border: 1px solid var(--border); }
   .cert-item { background: var(--bg1); padding: 1.25rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .cert-name { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 500; margin-bottom: 0.25rem; line-height: 1.4; }
   .cert-issuer { font-family: var(--mono); font-size: 11px; color: var(--muted2); }
 
-  /* CONTACT */
   .contact-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
   .contact-copy { max-width: 420px; }
   .contact-copy p { color: var(--muted); font-size: 15px; line-height: 1.8; font-weight: 300; }
@@ -288,7 +278,6 @@
   footer { border-top: 1px solid var(--border); padding: 1.5rem 2.5rem; text-align: center; }
   footer p { font-family: var(--mono); font-size: 11px; color: var(--muted2); letter-spacing: 0.04em; }
 
-  /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .hero-tag { animation: fadeUp 0.5s ease both; }
   .hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
@@ -349,7 +338,6 @@
   </div>
 </div>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">// selected work</div>
   <div class="section-title">Projects</div>
@@ -359,10 +347,7 @@
     <div class="project-card">
       <div class="project-type">RAG · NLP</div>
       <div class="project-name">AegisRAG</div>
-      <p class="project-desc">
-        Retrieval-augmented generation system focused on faithfulness and context integrity.
-        Designed with production reliability as a first-class constraint.
-      </p>
+      <p class="project-desc">Retrieval-augmented generation system focused on faithfulness and context integrity. Designed with production reliability as a first-class constraint.</p>
       <div class="project-tags">
         <span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">Python</span><span class="tag">Vector DB</span>
       </div>
@@ -372,10 +357,7 @@
     <div class="project-card">
       <div class="project-type">Systems · Storage</div>
       <div class="project-name">RocksDB SSTable Analysis</div>
-      <p class="project-desc">
-        Deep-dive analysis of RocksDB SSTable internals — compaction behavior,
-        read amplification patterns, and key-level access profiling.
-      </p>
+      <p class="project-desc">Deep-dive analysis of RocksDB SSTable internals — compaction behavior, read amplification patterns, and key-level access profiling.</p>
       <div class="project-tags">
         <span class="tag">RocksDB</span><span class="tag">LSM Tree</span><span class="tag">C++</span><span class="tag">Systems</span>
       </div>
@@ -385,9 +367,7 @@
     <div class="project-card">
       <div class="project-type">ML · Risk</div>
       <div class="project-name">P2P Lending Risk Management</div>
-      <p class="project-desc">
-        High-performance loan repayment prediction for P2P lending platforms. Stacking ensemble of XGBoost, LightGBM, and CatBoost, evaluated on AUC-ROC and Precision-Recall.
-      </p>
+      <p class="project-desc">High-performance loan repayment prediction for P2P lending platforms. Stacking ensemble of XGBoost, LightGBM, and CatBoost, evaluated on AUC-ROC and Precision-Recall.</p>
       <div class="project-tags">
         <span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">CatBoost</span><span class="tag">Ensemble</span>
       </div>
@@ -397,10 +377,7 @@
     <div class="project-card">
       <div class="project-type">ML · Finance</div>
       <div class="project-name">Portfolio Optimization with ML</div>
-      <p class="project-desc">
-        ML-driven portfolio construction combining modern portfolio theory with
-        learned covariance estimators and regime-aware allocation strategies.
-      </p>
+      <p class="project-desc">ML-driven portfolio construction combining modern portfolio theory with learned covariance estimators and regime-aware allocation strategies.</p>
       <div class="project-tags">
         <span class="tag">Quant Finance</span><span class="tag">Optimization</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
       </div>
@@ -410,10 +387,7 @@
     <div class="project-card">
       <div class="project-type">ML · Reliability</div>
       <div class="project-name">Aircraft Engine Failure Forecasting</div>
-      <p class="project-desc">
-        Predictive maintenance for turbofan engines using the CMAPSS dataset.
-        Time-series RUL estimation with uncertainty-aware forecasting.
-      </p>
+      <p class="project-desc">Predictive maintenance for turbofan engines using the CMAPSS dataset. Time-series RUL estimation with uncertainty-aware forecasting.</p>
       <div class="project-tags">
         <span class="tag">LSTM</span><span class="tag">Time Series</span><span class="tag">RUL</span><span class="tag">Predictive Maintenance</span>
       </div>
@@ -423,10 +397,7 @@
     <div class="project-card">
       <div class="project-type">Algorithms · Systems</div>
       <div class="project-name">PageRank Implementation</div>
-      <p class="project-desc">
-        PageRank from scratch on Stanford's Google Web Graph (millions of directed edges).
-        Adjacency-list graph representation with convergence-optimized iterative ranking.
-      </p>
+      <p class="project-desc">PageRank from scratch on Stanford's Google Web Graph (millions of directed edges). Adjacency-list representation with convergence-optimized iterative ranking.</p>
       <div class="project-tags">
         <span class="tag">Graph Algorithms</span><span class="tag">DSA</span><span class="tag">Python</span><span class="tag">Large Scale</span>
       </div>
@@ -436,10 +407,7 @@
     <div class="project-card">
       <div class="project-type">ML · Systems</div>
       <div class="project-name">Book Recommendation System</div>
-      <p class="project-desc">
-        Production-grade recommendation pipeline: ETL ingestion, Google Books enrichment,
-        deduplication, FastAPI backend, SQL storage, and modular resume-safe execution.
-      </p>
+      <p class="project-desc">Production-grade recommendation pipeline: ETL ingestion, Google Books enrichment, deduplication, FastAPI backend, SQL storage, and modular resume-safe execution.</p>
       <div class="project-tags">
         <span class="tag">FastAPI</span><span class="tag">ETL</span><span class="tag">Recommender</span><span class="tag">PostgreSQL</span>
       </div>
@@ -449,10 +417,7 @@
     <div class="project-card">
       <div class="project-type">ML · Risk</div>
       <div class="project-name">Credit Default Risk Management</div>
-      <p class="project-desc">
-        Credit risk prediction using financial, demographic, and behavioural features.
-        SMOTE for class imbalance, high recall on default class to minimize lender exposure.
-      </p>
+      <p class="project-desc">Credit risk prediction using financial, demographic, and behavioural features. SMOTE for class imbalance, high recall on default class to minimize lender exposure.</p>
       <div class="project-tags">
         <span class="tag">Logistic Regression</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span>
       </div>
@@ -462,7 +427,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">// work history</div>
   <div class="section-title">Experience</div>
@@ -504,7 +468,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">// technical stack</div>
   <div class="section-title">Skills</div>
@@ -576,7 +539,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-label">// about me</div>
   <div class="section-title">Background</div>
@@ -585,7 +547,7 @@
     <div class="about-text">
       <p>
         M.Sc Data Science student at Dhirubhai Ambani University (formerly DA-IICT), Gandhinagar.
-        Previously completed a B.E. in Engineering from L.D. College of Engineering, Ahmedabad (CPI 7.99).
+        Previously completed a B.E. from L.D. College of Engineering, Ahmedabad (CPI 7.99).
       </p>
       <p>
         My work spans production ML pipelines, storage system internals, and quantitative risk models.
@@ -599,7 +561,7 @@
 
       <div style="margin-top: 2rem;">
         <div class="section-label" style="margin-bottom: 1rem;">// certifications</div>
-        <div class="certs-grid" style="border: 1px solid var(--border);">
+        <div class="certs-grid">
           <div class="cert-item">
             <div class="cert-name">Neural Networks and Deep Learning</div>
             <div class="cert-issuer">deeplearning.ai · Coursera</div>
@@ -657,7 +619,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-label">// get in touch</div>
   <div class="section-title">Contact</div>
@@ -671,9 +632,9 @@
     </div>
 
     <div class="contact-links">
-      <a href="mailto:dhruvparmar051@outlook.in" class="contact-link">
+      <a href="mailto:dhruvparmar051@outlook.com" class="contact-link">
         <span class="contact-link-label">Email</span>
-        dhruvparmar051@outlook.in
+        dhruvparmar051@outlook.com
       </a>
       <a href="https://github.com/DhruvParmar051" class="contact-link" target="_blank" rel="noopener">
         <span class="contact-link-label">GitHub</span>
