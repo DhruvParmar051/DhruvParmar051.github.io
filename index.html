@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dhruv Parmar — ML &amp; Systems Engineer</title>
+<title>Dhruv Parmar — Data Science &amp; ML Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
@@ -40,13 +40,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0,0,0,0.03) 2px,
-      rgba(0,0,0,0.03) 4px
-    );
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
     pointer-events: none;
     z-index: 1000;
   }
@@ -54,6 +48,7 @@
   a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
   a:hover { color: #fff; }
 
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -68,29 +63,12 @@
     -webkit-backdrop-filter: blur(12px);
   }
 
-  .nav-logo {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
+  .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-links a:hover { color: var(--accent); }
 
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -115,13 +93,7 @@
     gap: 0.75rem;
   }
 
-  .hero-tag::before {
-    content: '';
-    display: inline-block;
-    width: 2rem;
-    height: 1px;
-    background: var(--accent);
-  }
+  .hero-tag::before { content: ''; display: inline-block; width: 2rem; height: 1px; background: var(--accent); }
 
   .hero h1 {
     font-family: var(--mono);
@@ -144,11 +116,7 @@
     font-weight: 300;
   }
 
-  .hero-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .hero-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .btn {
     font-family: var(--mono);
@@ -169,11 +137,9 @@
 
   .hero-grid {
     position: absolute;
-    right: -2rem;
-    top: 50%;
+    right: -2rem; top: 50%;
     transform: translateY(-50%);
-    width: 380px;
-    height: 380px;
+    width: 380px; height: 380px;
     opacity: 0.06;
     pointer-events: none;
     display: grid;
@@ -183,9 +149,9 @@
   }
 
   .hero-grid span { background: var(--accent); border-radius: 2px; }
-
   @media (max-width: 800px) { .hero-grid { display: none; } }
 
+  /* SECTIONS */
   section {
     max-width: 1100px;
     margin: 0 auto;
@@ -193,24 +159,10 @@
     border-top: 1px solid var(--border);
   }
 
-  .section-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted2);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-  }
+  .section-label { font-family: var(--mono); font-size: 11px; color: var(--muted2); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .section-title { font-family: var(--mono); font-size: 1.5rem; font-weight: 600; color: var(--text); margin-bottom: 3rem; letter-spacing: -0.02em; }
 
-  .section-title {
-    font-family: var(--mono);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 3rem;
-    letter-spacing: -0.02em;
-  }
-
+  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -232,8 +184,7 @@
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 3px;
-    height: 0;
+    width: 3px; height: 0;
     background: var(--accent);
     transition: height 0.3s ease;
   }
@@ -241,234 +192,119 @@
   .project-card:hover { background: var(--bg2); }
   .project-card:hover::before { height: 100%; }
 
-  .project-type {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent2);
-    margin-bottom: 0.75rem;
-  }
+  .project-type { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent2); margin-bottom: 0.75rem; }
+  .project-name { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; line-height: 1.3; }
+  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; font-weight: 300; }
 
-  .project-name {
-    font-family: var(--mono);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 0.75rem;
-    line-height: 1.3;
-  }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+  .tag { font-family: var(--mono); font-size: 10px; color: var(--muted2); border: 1px solid var(--border2); padding: 0.2rem 0.6rem; letter-spacing: 0.05em; }
 
-  .project-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-    font-weight: 300;
-  }
-
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted2);
-    border: 1px solid var(--border2);
-    padding: 0.2rem 0.6rem;
-    letter-spacing: 0.05em;
-  }
-
-  .project-link {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
+  .project-link { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.4rem; }
   .project-link::after { content: '→'; transition: transform 0.2s; }
   .project-link:hover::after { transform: translateX(4px); }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1px;
-    border: 1px solid var(--border);
-  }
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); }
 
-  .skill-group {
+  .exp-item {
     background: var(--bg1);
-    padding: 1.5rem;
-    border-right: 1px solid var(--border);
+    padding: 1.75rem;
     border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 2rem;
+    transition: background 0.2s;
   }
 
-  .skill-group-name {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
+  .exp-item:hover { background: var(--bg2); }
 
-  .skill-list {
-    list-style: none;
+  .exp-role { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+  .exp-company { font-family: var(--mono); font-size: 12px; color: var(--accent2); }
+  .exp-date { font-family: var(--mono); font-size: 11px; color: var(--muted2); text-align: right; white-space: nowrap; }
+  .exp-location { font-family: var(--mono); font-size: 11px; color: var(--muted2); text-align: right; }
+
+  .exp-bullets {
+    grid-column: 1 / -1;
+    margin-top: 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    padding-left: 0;
+    list-style: none;
   }
 
-  .skill-list li {
-    font-family: var(--mono);
-    font-size: 12px;
+  .exp-bullets li {
+    font-size: 13px;
     color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .skill-list li::before { content: '›'; color: var(--muted2); font-size: 14px; }
-
-  .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  @media (max-width: 700px) { .about-inner { grid-template-columns: 1fr; gap: 2rem; } }
-
-  .about-text p {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
     font-weight: 300;
-    margin-bottom: 1rem;
+    line-height: 1.6;
+    display: flex;
+    gap: 0.75rem;
   }
 
-  .about-text p:last-child { margin-bottom: 0; }
+  .exp-bullets li::before { content: '›'; color: var(--muted2); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
-  .about-stats {
-    display: flex;
-    flex-direction: column;
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1px;
     border: 1px solid var(--border);
   }
 
-  .stat {
-    background: var(--bg1);
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+  .skill-group { background: var(--bg1); padding: 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .skill-group-name { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .skill-list li { font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
+  .skill-list li::before { content: '›'; color: var(--muted2); font-size: 14px; }
 
-  .stat-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted2);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
+  /* ABOUT */
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  @media (max-width: 700px) { .about-inner { grid-template-columns: 1fr; gap: 2rem; } }
 
-  .stat-value {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--accent);
-    font-weight: 500;
-  }
+  .about-text p { color: var(--muted); font-size: 15px; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+  .about-text p:last-child { margin-bottom: 0; }
 
-  .contact-inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
+  .about-stats { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); }
+  .stat { background: var(--bg1); padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: baseline; }
+  .stat-label { font-family: var(--mono); font-size: 11px; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat-value { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 500; }
 
+  /* CERTS */
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; border: 1px solid var(--border); }
+  .cert-item { background: var(--bg1); padding: 1.25rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .cert-name { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 500; margin-bottom: 0.25rem; line-height: 1.4; }
+  .cert-issuer { font-family: var(--mono); font-size: 11px; color: var(--muted2); }
+
+  /* CONTACT */
+  .contact-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
   .contact-copy { max-width: 420px; }
-
-  .contact-copy p {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-    font-weight: 300;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    min-width: 200px;
-  }
-
-  .contact-link {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: color 0.15s;
-  }
-
+  .contact-copy p { color: var(--muted); font-size: 15px; line-height: 1.8; font-weight: 300; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; min-width: 260px; }
+  .contact-link { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.75rem; transition: color 0.15s; }
   .contact-link:hover { color: var(--accent); }
+  .contact-link-label { font-size: 10px; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em; min-width: 64px; }
 
-  .contact-link-label {
-    font-size: 10px;
-    color: var(--muted2);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    min-width: 60px;
-  }
+  footer { border-top: 1px solid var(--border); padding: 1.5rem 2.5rem; text-align: center; }
+  footer p { font-family: var(--mono); font-size: 11px; color: var(--muted2); letter-spacing: 0.04em; }
 
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem 2.5rem;
-    text-align: center;
-  }
-
-  footer p {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted2);
-    letter-spacing: 0.04em;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .hero-tag { animation: fadeUp 0.5s ease both; }
   .hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
   .hero-desc { animation: fadeUp 0.5s 0.2s ease both; }
   .hero-links { animation: fadeUp 0.5s 0.3s ease both; }
 
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  .cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent); margin-left: 4px; vertical-align: middle; animation: blink 1s step-end infinite; }
 
-  .cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1em;
-    background: var(--accent);
-    margin-left: 4px;
-    vertical-align: middle;
-    animation: blink 1s step-end infinite;
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.25rem; }
+    section { padding: 3.5rem 1.25rem; }
+    .hero { padding: 6rem 1.25rem 3rem; }
+    .exp-item { grid-template-columns: 1fr; }
+    .exp-date, .exp-location { text-align: left; }
   }
 </style>
 </head>
@@ -478,6 +314,7 @@
   <span class="nav-logo">dhruv@parmar:~$</span>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Stack</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -486,16 +323,17 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">ML · Systems · Quantitative Research</div>
+    <div class="hero-tag">ML · Systems · Data Science</div>
     <h1>Dhruv<br><span class="accent">Parmar</span><span class="cursor"></span></h1>
     <p class="hero-desc">
-      Building at the intersection of machine learning and production systems.
-      From RAG pipelines and storage engine internals to quantitative finance models —
-      I care about correctness, efficiency, and things that actually work.
+      M.Sc Data Science @ Dhirubhai Ambani University. Building at the intersection of
+      machine learning, storage systems, and quantitative finance —
+      I care about correctness, efficiency, and things that actually work in production.
     </p>
     <div class="hero-links">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="https://github.com/DhruvParmar051" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/dhruv-parmar-a79a9b281/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </div>
 
@@ -511,6 +349,7 @@
   </div>
 </div>
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">// selected work</div>
   <div class="section-title">Projects</div>
@@ -525,10 +364,7 @@
         Designed with production reliability as a first-class constraint.
       </p>
       <div class="project-tags">
-        <span class="tag">RAG</span>
-        <span class="tag">LLM</span>
-        <span class="tag">Python</span>
-        <span class="tag">Vector DB</span>
+        <span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">Python</span><span class="tag">Vector DB</span>
       </div>
       <a href="https://github.com/DhruvParmar051/AegisRAG" class="project-link" target="_blank" rel="noopener">View repo</a>
     </div>
@@ -541,12 +377,21 @@
         read amplification patterns, and key-level access profiling.
       </p>
       <div class="project-tags">
-        <span class="tag">RocksDB</span>
-        <span class="tag">LSM Tree</span>
-        <span class="tag">C++</span>
-        <span class="tag">Systems</span>
+        <span class="tag">RocksDB</span><span class="tag">LSM Tree</span><span class="tag">C++</span><span class="tag">Systems</span>
       </div>
       <a href="https://github.com/DhruvParmar051/rocksdb-sstable-analysis" class="project-link" target="_blank" rel="noopener">View repo</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-type">ML · Risk</div>
+      <div class="project-name">P2P Lending Risk Management</div>
+      <p class="project-desc">
+        High-performance loan repayment prediction for P2P lending platforms. Stacking ensemble of XGBoost, LightGBM, and CatBoost, evaluated on AUC-ROC and Precision-Recall.
+      </p>
+      <div class="project-tags">
+        <span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">CatBoost</span><span class="tag">Ensemble</span>
+      </div>
+      <a href="https://github.com/DhruvParmar051/peer_to_peer_lending_risk_management" class="project-link" target="_blank" rel="noopener">View repo</a>
     </div>
 
     <div class="project-card">
@@ -557,117 +402,181 @@
         learned covariance estimators and regime-aware allocation strategies.
       </p>
       <div class="project-tags">
-        <span class="tag">Quant Finance</span>
-        <span class="tag">Optimization</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">scikit-learn</span>
+        <span class="tag">Quant Finance</span><span class="tag">Optimization</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
       </div>
       <a href="https://github.com/DhruvParmar051/portfolio_optimization-ml" class="project-link" target="_blank" rel="noopener">View repo</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-type">ML · Risk</div>
-      <div class="project-name">P2P Lending Risk Management</div>
-      <p class="project-desc">
-        End-to-end credit risk pipeline for peer-to-peer lending platforms.
-        Includes default prediction, expected loss estimation, and portfolio-level risk metrics.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Credit Risk</span>
-        <span class="tag">XGBoost</span>
-        <span class="tag">Feature Engineering</span>
-        <span class="tag">Pandas</span>
-      </div>
-      <a href="https://github.com/DhruvParmar051/peer_to_peer_lending_risk_management" class="project-link" target="_blank" rel="noopener">View repo</a>
     </div>
 
     <div class="project-card">
       <div class="project-type">ML · Reliability</div>
       <div class="project-name">Aircraft Engine Failure Forecasting</div>
       <p class="project-desc">
-        Predictive maintenance for turbofan engines using CMAPSS dataset.
+        Predictive maintenance for turbofan engines using the CMAPSS dataset.
         Time-series RUL estimation with uncertainty-aware forecasting.
       </p>
       <div class="project-tags">
-        <span class="tag">Predictive Maintenance</span>
-        <span class="tag">LSTM</span>
-        <span class="tag">Time Series</span>
-        <span class="tag">RUL</span>
+        <span class="tag">LSTM</span><span class="tag">Time Series</span><span class="tag">RUL</span><span class="tag">Predictive Maintenance</span>
       </div>
       <a href="https://github.com/DhruvParmar051/Aircraft-Engine-Failure-Forecasting" class="project-link" target="_blank" rel="noopener">View repo</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-type">Algorithms · Systems</div>
+      <div class="project-name">PageRank Implementation</div>
+      <p class="project-desc">
+        PageRank from scratch on Stanford's Google Web Graph (millions of directed edges).
+        Adjacency-list graph representation with convergence-optimized iterative ranking.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Graph Algorithms</span><span class="tag">DSA</span><span class="tag">Python</span><span class="tag">Large Scale</span>
+      </div>
+      <a href="https://github.com/DhruvParmar051/ranking_of_webpage" class="project-link" target="_blank" rel="noopener">View repo</a>
     </div>
 
     <div class="project-card">
       <div class="project-type">ML · Systems</div>
       <div class="project-name">Book Recommendation System</div>
       <p class="project-desc">
-        Production-grade recommendation pipeline with ETL, Google Books enrichment,
-        FastAPI backend, SQLite storage, and Streamlit deployment.
+        Production-grade recommendation pipeline: ETL ingestion, Google Books enrichment,
+        deduplication, FastAPI backend, SQL storage, and modular resume-safe execution.
       </p>
       <div class="project-tags">
-        <span class="tag">FastAPI</span>
-        <span class="tag">ETL</span>
-        <span class="tag">Recommender</span>
-        <span class="tag">Streamlit</span>
+        <span class="tag">FastAPI</span><span class="tag">ETL</span><span class="tag">Recommender</span><span class="tag">PostgreSQL</span>
       </div>
       <a href="https://github.com/DhruvParmar051/book-recommendation-system" class="project-link" target="_blank" rel="noopener">View repo</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-type">ML · Risk</div>
+      <div class="project-name">Credit Default Risk Management</div>
+      <p class="project-desc">
+        Credit risk prediction using financial, demographic, and behavioural features.
+        SMOTE for class imbalance, high recall on default class to minimize lender exposure.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Logistic Regression</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span>
+      </div>
+      <a href="https://github.com/DhruvParmar051/Credit_Card_Fraud_Detection" class="project-link" target="_blank" rel="noopener">View repo</a>
     </div>
 
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">// work history</div>
+  <div class="section-title">Experience</div>
+
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">React Developer Intern</div>
+        <div class="exp-company">Codentic Software</div>
+      </div>
+      <div>
+        <div class="exp-date">Jan 2024 – Apr 2024</div>
+        <div class="exp-location">Anand, Gujarat</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Developed and maintained responsive web applications using React, JavaScript, HTML5, and CSS3.</li>
+        <li>Collaborated with cross-functional teams to design and implement user-centric features.</li>
+        <li>Optimized application performance through code refactoring and debugging, ensuring seamless UX.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Database Administrator Intern</div>
+        <div class="exp-company">Hatkesh Infotech Pvt. Ltd.</div>
+      </div>
+      <div>
+        <div class="exp-date">Aug 2023 – Sep 2023</div>
+        <div class="exp-location">Anand, Gujarat</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Managed database systems for enterprise-level software.</li>
+        <li>Designed and implemented complex database structures for scalable, efficient data storage.</li>
+        <li>Optimized query performance and ensured data integrity through analysis and systematic testing.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">// technical stack</div>
   <div class="section-title">Skills</div>
 
   <div class="skills-grid">
     <div class="skill-group">
+      <div class="skill-group-name">Languages</div>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>JavaScript / TypeScript</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
       <div class="skill-group-name">ML / AI</div>
       <ul class="skill-list">
         <li>PyTorch</li>
         <li>scikit-learn</li>
-        <li>XGBoost / LightGBM</li>
-        <li>Hugging Face</li>
+        <li>XGBoost / LightGBM / CatBoost</li>
         <li>RAG Architectures</li>
-        <li>LLM Fine-tuning</li>
+        <li>Feature Engineering</li>
+        <li>Hyperparameter Tuning</li>
       </ul>
     </div>
 
     <div class="skill-group">
-      <div class="skill-group-name">Systems</div>
+      <div class="skill-group-name">Data</div>
       <ul class="skill-list">
-        <li>RocksDB / LSM Trees</li>
-        <li>Storage Internals</li>
-        <li>C / C++</li>
-        <li>Distributed Systems</li>
-        <li>Performance Profiling</li>
+        <li>Pandas / NumPy</li>
+        <li>Matplotlib / Seaborn</li>
+        <li>EDA &amp; Statistical Analysis</li>
+        <li>ETL Pipeline Design</li>
       </ul>
     </div>
 
     <div class="skill-group">
-      <div class="skill-group-name">Quant Finance</div>
+      <div class="skill-group-name">Web &amp; APIs</div>
       <ul class="skill-list">
-        <li>Portfolio Optimization</li>
-        <li>Credit Risk Modeling</li>
-        <li>Time Series Analysis</li>
-        <li>Factor Models</li>
-        <li>NumPy / SciPy</li>
+        <li>FastAPI / Flask</li>
+        <li>React.js / Node.js</li>
+        <li>Express.js</li>
+        <li>Tailwind CSS</li>
       </ul>
     </div>
 
     <div class="skill-group">
-      <div class="skill-group-name">Engineering</div>
+      <div class="skill-group-name">Databases</div>
       <ul class="skill-list">
-        <li>Python (production)</li>
-        <li>FastAPI / REST</li>
-        <li>SQLite / PostgreSQL</li>
+        <li>MySQL / PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>SQLite</li>
+        <li>RocksDB</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-name">Infra &amp; Cloud</div>
+      <ul class="skill-list">
         <li>Docker</li>
+        <li>AWS / Azure</li>
         <li>Git / GitHub</li>
+        <li>Linux Shell</li>
+        <li>Postman</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="section-label">// about me</div>
   <div class="section-title">Background</div>
@@ -675,38 +584,70 @@
   <div class="about-inner">
     <div class="about-text">
       <p>
-        I'm a graduate-level researcher and developer working across machine learning,
-        systems engineering, and quantitative research. My work spans the full stack —
-        from storage engine internals and compaction analysis to production ML pipelines
-        and financial risk models.
+        M.Sc Data Science student at Dhirubhai Ambani University (formerly DA-IICT), Gandhinagar.
+        Previously completed a B.E. in Engineering from L.D. College of Engineering, Ahmedabad (CPI 7.99).
       </p>
       <p>
-        I care about correctness before cleverness. If a system works but I don't
-        understand <em>why</em>, that's not good enough. I build things to last:
-        typed, tested, with failure modes considered from the start.
+        My work spans production ML pipelines, storage system internals, and quantitative risk models.
+        I care about correctness before cleverness — if a system works but I don't understand why,
+        that's not good enough.
       </p>
       <p>
-        Currently focused on RAG system reliability, long-context faithfulness evaluation,
-        and the intersection of ML and production systems.
+        Currently focused on RAG system reliability (AegisRAG), long-context faithfulness evaluation,
+        and RocksDB compaction analysis. Open to research roles and SWE positions at the edge of ML and systems.
       </p>
+
+      <div style="margin-top: 2rem;">
+        <div class="section-label" style="margin-bottom: 1rem;">// certifications</div>
+        <div class="certs-grid" style="border: 1px solid var(--border);">
+          <div class="cert-item">
+            <div class="cert-name">Neural Networks and Deep Learning</div>
+            <div class="cert-issuer">deeplearning.ai · Coursera</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Improving Deep Neural Networks</div>
+            <div class="cert-issuer">deeplearning.ai · Coursera</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+            <div class="cert-issuer">Microsoft Certified</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">What is Generative AI?</div>
+            <div class="cert-issuer">LinkedIn Learning</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Flipkart GRiD 5.0</div>
+            <div class="cert-issuer">Certificate of Participation · Unstop</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="about-stats">
       <div class="stat">
-        <span class="stat-label">Focus Areas</span>
+        <span class="stat-label">Degree</span>
+        <span class="stat-value">M.Sc Data Science</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">University</span>
+        <span class="stat-value">DA University</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Since</span>
+        <span class="stat-value">2025 – Present</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Focus</span>
         <span class="stat-value">ML · Systems · Quant</span>
       </div>
       <div class="stat">
-        <span class="stat-label">Primary Language</span>
-        <span class="stat-value">Python · C++</span>
-      </div>
-      <div class="stat">
-        <span class="stat-label">Current Work</span>
-        <span class="stat-value">AegisRAG · RocksDB</span>
+        <span class="stat-label">Languages</span>
+        <span class="stat-value">Python · C++ · SQL</span>
       </div>
       <div class="stat">
         <span class="stat-label">Location</span>
-        <span class="stat-value">India</span>
+        <span class="stat-value">Gandhinagar, India</span>
       </div>
       <div class="stat">
         <span class="stat-label">Open To</span>
@@ -716,6 +657,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-label">// get in touch</div>
   <div class="section-title">Contact</div>
@@ -729,20 +671,24 @@
     </div>
 
     <div class="contact-links">
+      <a href="mailto:dhruvparmar051@outlook.in" class="contact-link">
+        <span class="contact-link-label">Email</span>
+        dhruvparmar051@outlook.in
+      </a>
       <a href="https://github.com/DhruvParmar051" class="contact-link" target="_blank" rel="noopener">
         <span class="contact-link-label">GitHub</span>
         DhruvParmar051
       </a>
-      <a href="mailto:your@email.com" class="contact-link">
-        <span class="contact-link-label">Email</span>
-        your@email.com
+      <a href="https://www.linkedin.com/in/dhruv-parmar-a79a9b281/" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-link-label">LinkedIn</span>
+        dhruv-parmar-a79a9b281
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>dhruv parmar · 2026</p>
+  <p>dhruv parmar · msc data science · gandhinagar, india · 2026</p>
 </footer>
 
 </body>
